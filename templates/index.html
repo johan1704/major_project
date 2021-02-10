@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Churn predictor</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body bgcolor='blue'>
+  <nav class="green" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Churn Predictor</a>
+      
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+      </ul>
+
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+     <h5 style="text-align: center; color: brown; font-weight: 600;">{{pred}}</h5>
+      <h1 class="header center orange-text"><strong><u>CHURN PREDICTOR</u></strong></h1>
+      <div class="row center">
+      
+        <h5 class="header col s12 light"><strong>Predict the probability of how likely the customers will leave</strong>
+        <br>
+        </h5>
+      </div>
+
+
+      <div class="row">
+        <form action='/predict' method="post" class="col s12">
+            <div class="row">
+                <div class="input-field col s4">
+                    <label for="first_name"><b>Credit Score</b></label>
+                    <br>
+                    <input placeholder="Enter credit score" name="1" id="first_name" type="number" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>Geography </b></label>
+                    <br>
+                    <input placeholder="Enter credit score" name="2" id="first_name" type="text" class="validate">
+                </div>
+    
+                <div class="input-field col s4">
+                    <label for="_name"><b>Gender</b></label>
+                    <br>
+                    <input placeholder="Gender" name="3" id="first_name" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="first_name"><b>Age</b></label>
+                    <br>
+                    <input placeholder="enter the age" min="18" name="4" id="first_name" type="number" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>Tenure</b></label>
+                    <br>
+                    <input id="last_name" name="5" placeholder="Number of year the customer has been in the compnay"  type="number" class="validate">
+                </div>
+                <div class="input-field col s4">
+                  <label ><b>Balance</b></label>
+                  <br>
+                  <input name ="6" placeholder="Enter his balance" type="text">
+
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>Number of product used:</b></label>
+                    <br>
+                    <input id="last_name" name="7" min="1" max="5" placeholder="NumberOfProductUsed"  type="number" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>Has a credit card</b></label>
+                    <br>
+                    <input placeholder="Credit card" name="8" id="first_name" type="number" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>Is an active member</b></label>
+                    <br>
+                    <input placeholder="Active member" name="9" id="first_name" type="number" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>Estimated Salary</b></label>
+                    <br>
+                    <input id="_name" name="10" placeholder="Estimated Salary" type="text" class="validate">
+                </div>
+          </div>
+    
+          <div class="row center">
+    
+              <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+
+          </div>
+        </form>
+  </div>
+
+      <br>
+
+     
+    <br><br>
+  </div>
+  </div>
+
+  <footer class="page-footer green">
+    <div class="footer-copyright">
+      <div class="container" style="padding-bottom: 1rem; position: fixed; font-size: 1.2rem; margin-left: 5rem;">
+        <p>johankouame10@gmail.com</p>
+        <p>Parasharabhay13@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
+
